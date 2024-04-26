@@ -1,0 +1,443 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+header{
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 33px 9%;
+  background: transparent;
+}
+
+.logo{
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+
+.navlist{
+  display: flex;
+}
+
+.navlist a{
+  color: white;
+  margin-left: 60px;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all .55s ease;
+}
+
+.navlist a:hover{
+  border-bottom: 2px solid white;
+}
+
+#menu-icon{
+color: white;
+font-size: 35px;
+z-index: 10001;
+cursor: pointer;
+display: none;
+}
+
+.hero{
+height: 100%;
+width: 100%;
+min-height: 100vh;
+background: linear-gradient(245.59deg, #4d9559 0%, #38703d 28.53%, #133917 75.52%);
+position: relative;
+display: flex;
+grid-template-columns: repeat(2, 1fr);
+align-items: center;
+gap: 2rem;
+flex-direction: row;
+}
+
+section{
+  padding: 0 19%;
+}
+
+.hero-text h5{
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.hero-text h1{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 90px;
+  line-height: 1;
+  color: white;
+  margin: 0 0 45px;
+}
+
+.hero-text h4{
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.hero-text p{
+  color: white;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 40px;
+}
+
+
+.hero-text a{
+  display: inline-block;
+  color: white;
+  background: #4d9559;
+  border: 1px solid transparent;
+  padding: 12px 30px;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all .55s ease;
+}
+
+.hero-text a:hover{
+  background: transparent;
+  border: 1px solid white;
+  transform: translateX(8px);
+}
+
+.hero-text a.ctaa i{
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.icons{
+  position: absolute;
+  top: 50%;
+  padding: 0 9%;
+  transform: translateY(-50%);
+}
+
+.icons i{
+  display: block;
+  margin: 26px 0;
+  font-size: 24px;
+  color: white;
+  transition: all .50s ease;
+}
+
+.icons i:hover{
+  color: #4d9559;
+  transform: translateY(-5px);
+}
+
+.scroll-down{
+  position: absolute;
+  bottom: 6%;
+  right: 9%;
+}
+
+.scroll-down i{
+  display: block;
+  padding: 12px;
+  font-size: 25px;
+  color: white;
+  background: #4d9559;
+  border-radius: 30px;
+  transition: all .50s ease;
+}
+.scroll-down i:hover{
+  transform: translateY(-5px);
+}
+
+/* About Section Styling */
+/* Those Elements Where We Have Apply Same CSS,
+ I'm Selecting Directly 'Section Tag' and 'Class'  */
+ section{
+  padding-top: 40px;
+}
+section .content{
+  width: 80%;
+  margin: 40px auto;
+  font-family: 'Poppins', sans-serif;
+}
+.about .about-details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section .title{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+section .title span{
+  color: #0E2431;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 8px;
+}
+section .title span::before,
+section .title span::after{
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #4070f4;
+  left: 0;
+  bottom: 0;
+}
+section .title span::after{
+  bottom: -7px;
+  width: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about .about-details .left{
+  width: 45%;
+}
+.about .left img{
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.about-details .right{
+  width: 55%;
+}
+section  .topic{
+  color: #0E2431;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.about-details .right p{
+  text-align: justify;
+  color: #0E2431;
+}
+section .button{
+  margin: 16px 0;
+}
+section .button button{
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 25px;
+  font-weight: 400;
+  background: #4070f4;
+  color: #fff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+section .button button:hover{
+  border-color: #4070f4;
+  background-color: #fff;
+  color: #4070f4
+}
+
+.about .left_about img{
+    height: 275px;
+    width: 200px;
+    border-radius: 50px;
+    padding: 40px;
+}
+/* Poin-Poin Penting CSS */
+.poin .boxes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.poin .boxes .box{
+  margin: 20px 0;
+  width: calc(100% / 3 - 20px);
+  text-align: center;
+  border-radius: 12px;
+  padding: 30px 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  cursor: default;
+  transition: all 0.4s ease;
+}
+.poin .boxes .box:hover{
+  background: #4070f4;
+  color: #fff;
+}
+.poin .boxes .box .icon{
+  height: 50px;
+  width: 50px;
+  background: #4070f4;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  color: #fff;
+  margin: 0 auto 10px auto;
+  transition: all 0.4s ease;
+}
+.boxes .box:hover .icon{
+  background-color: #fff;
+  color: #4070f4;
+}
+.poin .boxes .box:hover .topic,
+.poin .boxes .box:hover p{
+  color: #0E2431;
+  transition: all 0.4s ease;
+}
+.poin .boxes .box:hover .topic,
+.poin .boxes .box:hover p{
+  color: #fff;
+}
+
+
+
+/*navbar About*/
+.navlist_about{
+  display: flex;
+  background-color: linear-gradient(245.59deg, #4d9559 0%, #38703d 28.53%, #133917 75.52%);
+}
+
+.navlist_about a{
+  color: linear-gradient(245.59deg, #4d9559 0%, #38703d 28.53%, #133917 75.52%);
+  margin-left: 60px;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all .55s ease;
+}
+
+.navlist_about a:hover{
+  border-bottom: 2px solid white;
+}
+
+#menu-icon{
+color: linear-gradient(245.59deg, #4d9559 0%, #38703d 28.53%, #133917 75.52%);
+font-size: 35px;
+z-index: 10001;
+cursor: pointer;
+display: none;
+}
+ 
+
+  
+@media (max-width: 1535px){
+  header{
+    padding: 15px 3%;
+    transition: .2s;
+  }
+
+  .icons{
+    padding: 0 3%;
+    transition: .2s;
+  }
+
+  .scroll-down{
+    right: 3%;
+    transition: .2s;
+  }
+}
+
+@media (max-width: 1460px){
+  section{
+    padding: 0 12;
+    transition: .2s;
+  }
+}
+
+@media (max-width: 1340px){
+  .hero-img img{
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-text h1{
+    font-size: 75px;
+    margin: 0 0 30px;
+  }
+
+  .hero-text h5{
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 1195px){
+  section{
+    padding: 0 3%;
+    transition:  .2s;
+  }
+
+  .hero-text{
+    padding-top: 115px;
+  }
+
+  .hero-img{
+    text-align: center;
+  }
+
+  .hero-img img{
+    width: 560px;
+    height: auto;
+  }
+
+  .hero{
+    height: 100%;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .icons{
+   display: none;
+  }
+  .scroll-down{
+    display: none;
+  }
+}
+
+@media (max-width: 990px){
+  #menu-icon{
+    display: block;
+  }
+
+  .navlist{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 300px;
+    height: 40vh;
+    background: #4d9559;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 20px;
+    transition: all .55s ease;
+  }
+
+  .navlist a{
+    display: block;
+    margin: 7px 0;
+    margin-left: 0;
+  }
+  
+  .navlist.open{
+    right: 0;
+  }
+@media (max-width: 680px){
+  .hero-img img{
+    width: 100%;
+    height: auto;
+  }
+}
+}
+
