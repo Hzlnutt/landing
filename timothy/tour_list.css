@@ -1,0 +1,204 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+   
+  }
+  
+  header{
+    right: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;
+    background: transparent;
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
+  }
+  
+  .logo{
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+  }
+  
+  .navlist{
+    display: flex;
+  }
+  
+  .navlist h4{
+    color: white;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all .55s ease;
+  }
+  
+  .navlist h4:hover{
+    border-bottom: 2px solid white;
+  }
+  
+  .navlist a{
+    color: white;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all .55s ease;
+  }
+  
+  .navlist a:hover{
+    border-bottom: 2px solid white;
+  }
+  
+  #menu-icon{
+  color: white;
+  font-size: 35px;
+  
+  cursor: pointer;
+  display: none;
+  }
+  
+  .hero{
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #FF4B2B, #FF416C);
+  position: relative;
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+  flex-direction: row;
+  }
+  
+  .hero-text h5{
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 40px;
+  }
+  
+  .hero-text h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 90px;
+    line-height: 1;
+    color: white;
+    margin: 0 0 45px;
+  }
+  
+  .hero-text h4{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .hero-text p{
+    color: white;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 40px;
+  }
+  
+  
+  .hero-text a{
+    display: inline-block;
+    color: white;
+    background: #FF416C;
+    border: 1px solid transparent;
+    padding: 12px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .55s ease;
+  }
+  
+  .hero-text a:hover{
+    background: transparent;
+    border: 1px solid white;
+    transform: translateX(8px);
+  }
+  
+  .hero-text a.ctaa i{
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  
+  .icons{
+    position: absolute;
+    top: 50%;
+    padding: 0 9%;
+    transform: translateY(-50%);
+  }
+  
+  .icons i{
+    display: block;
+    margin: 26px 0;
+    font-size: 24px;
+    color: white;
+    transition: all .50s ease;
+  }
+  
+  .icons i:hover{
+    color: #4d9559;
+    transform: translateY(-5px);
+  }
+  
+  .scroll-down{
+    position: absolute;
+    bottom: 6%;
+    right: 9%;
+  }
+  
+  .scroll-down i{
+    display: block;
+    padding: 12px;
+    font-size: 25px;
+    color: white;
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
+    border-radius: 30px;
+    transition: all .50s ease;
+  }
+  .scroll-down i:hover{
+    transform: translateY(-5px);
+  }
+
+  .cardhome {
+    display: flex;
+    flex-direction: row-reverse; /* Mengubah arah konten menjadi dari kanan ke kiri */
+    justify-content: flex-end; /* Mengatur konten agar menyamping ke kanan */
+    width: 100%; /* Sesuaikan lebar sesuai kebutuhan Anda */
+}
+
+.card {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 250px;
+    margin: 20px;
+}
+
+/* Tambahkan margin untuk memisahkan card jika diinginkan */
+
+
+.card h2 {
+    color: #333;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.card p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin: 10px;
+}
+

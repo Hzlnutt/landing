@@ -55,7 +55,7 @@ display: none;
 height: 100%;
 width: 100%;
 min-height: 100vh;
-background: linear-gradient(245.59deg, #4d9559 0%, #38703d 28.53%, #133917 75.52%);
+background: linear-gradient(to right, #FF4B2B, #FF416C);
 position: relative;
 display: flex;
 grid-template-columns: repeat(2, 1fr);
@@ -101,7 +101,7 @@ section{
 .hero-text a{
   display: inline-block;
   color: white;
-  background: #4d9559;
+  background: #FF416C;
   border: 1px solid transparent;
   padding: 12px 30px;
   line-height: 1.4;
@@ -154,7 +154,7 @@ section{
   padding: 12px;
   font-size: 25px;
   color: white;
-  background: #4d9559;
+  background: linear-gradient(to right, #FF4B2B, #FF416C);
   border-radius: 30px;
   transition: all .50s ease;
 }
@@ -298,7 +298,7 @@ section .button button:hover{
 }
 .poin .boxes .box:hover .topic,
 .poin .boxes .box:hover p{
-  color: #fff;
+  color: #fff;
 }
 
 

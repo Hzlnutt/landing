@@ -1,0 +1,336 @@
+@import url("https://i.pinimg.com/originals/b9/83/6b/b9836b8d84be73dac0dcf4f0a0f11c3e.png");
+@import url("https://png.pngtree.com/background/20230517/original/pngtree-picture-of-the-leaning-tower-of-pisa-picture-image_2640268.jpg");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  list-style: none;
+  text-decoration: none;
+ 
+}
+
+header{
+  right: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 33px 9%;
+  background: transparent;
+  background: linear-gradient(to right, #FF4B2B, #FF416C);
+}
+
+.logo{
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+
+.navlist{
+  display: flex;
+}
+
+.navlist a{
+  color: white;
+  margin-left: 60px;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all .55s ease;
+}
+
+.navlist a:hover{
+  border-bottom: 2px solid white;
+}
+
+#menu-icon{
+color: white;
+font-size: 35px;
+
+cursor: pointer;
+display: none;
+}
+
+.hero{
+height: 100%;
+width: 100%;
+background: linear-gradient(to right, #FF4B2B, #FF416C);
+position: relative;
+display: flex;
+grid-template-columns: repeat(2, 1fr);
+align-items: center;
+gap: 2rem;
+flex-direction: row;
+}
+
+.hero-text h5{
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.hero-text h1{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 90px;
+  line-height: 1;
+  color: white;
+  margin: 0 0 45px;
+}
+
+.hero-text h4{
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.hero-text p{
+  color: white;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 40px;
+}
+
+
+.hero-text a{
+  display: inline-block;
+  color: white;
+  background: #FF416C;
+  border: 1px solid transparent;
+  padding: 12px 30px;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all .55s ease;
+}
+
+.hero-text a:hover{
+  background: transparent;
+  border: 1px solid white;
+  transform: translateX(8px);
+}
+
+.hero-text a.ctaa i{
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.icons{
+  position: absolute;
+  top: 50%;
+  padding: 0 9%;
+  transform: translateY(-50%);
+}
+
+.icons i{
+  display: block;
+  margin: 26px 0;
+  font-size: 24px;
+  color: white;
+  transition: all .50s ease;
+}
+
+.icons i:hover{
+  color: #4d9559;
+  transform: translateY(-5px);
+}
+
+.scroll-down{
+  position: absolute;
+  bottom: 6%;
+  right: 9%;
+}
+
+.scroll-down i{
+  display: block;
+  padding: 12px;
+  font-size: 25px;
+  color: white;
+  background: linear-gradient(to right, #FF4B2B, #FF416C);
+  border-radius: 30px;
+  transition: all .50s ease;
+}
+.scroll-down i:hover{
+  transform: translateY(-5px);
+}
+
+/* css untuk select */
+
+
+
+.poin .boxes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.poin .boxes .box{
+  margin: 20px 0;
+  width: calc(100% / 3 - 20px);
+  text-align: center;
+  border-radius: 12px;
+  padding: 30px 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  cursor: default;
+  transition: all 0.4s ease;
+  background: #fff;
+}
+
+.text-height {
+  height: 88px;
+}
+
+.tombol_booking {
+  border-radius: 320px;
+  color: #fff;
+  margin-top: 15px;
+  padding: 10px;
+  background: linear-gradient(to right, #FF4B2B, #FF416C);
+  box-shadow: 20px;
+}
+
+.tombol_booking:hover {
+  background: #fff;
+  color: black;
+}
+
+.poin .boxes .box:hover{
+  background: linear-gradient(to right, #FF4B2B, #FF416C);
+  color: #fff;
+}
+.poin .boxes .box .icon{
+  height: 50px;
+  width: 50px;
+  background: linear-gradient(to right, #FF4B2B, #FF416C);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  color: #fff;
+  margin: 0 auto 10px auto;
+  transition: all 0.4s ease;
+}
+.boxes .box:hover .icon{
+  background: #fff;
+  color: linear-gradient(to right, #FF4B2B, #FF416C);
+}
+
+.poin .boxes .box:hover .topic,
+.poin .boxes .box:hover p{
+  color: #0E2431;
+  transition: all 0.4s ease;
+}
+.poin .boxes .box:hover .topic,
+.poin .boxes .box:hover p{
+  color:#fff;
+}
+
+.topic p {
+  height: 100px;
+}
+
+.tulisan_landing {
+  justify-content: center;
+  display: flex;
+  font-size: 25px;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background: url("https://i.pinimg.com/originals/b9/83/6b/b9836b8d84be73dac0dcf4f0a0f11c3e.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 85vh;
+}
+
+.tulisan_landing h1 {
+  padding: 2px;
+}
+
+.title h1 {
+  justify-content: center;
+  display: flex;
+  padding-top: 100px;
+  color: #fff;
+}
+
+.content {
+  height: 110vh;
+  background: url("https://png.pngtree.com/background/20230517/original/pngtree-picture-of-the-leaning-tower-of-pisa-picture-image_2640268.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-left: 350px;
+  padding-right: 350px;
+}
+
+/* Keunggulan */
+
+.Keunggulan {
+  height: 100vh;
+}
+
+.h1-keunggulan {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 50px;
+  font-size: 50px;
+  font-family: "Epilogue";
+  flex-direction: column;
+  background: -webkit-linear-gradient( #FF4B2B, #FF416C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.why_us_box {
+
+  background: linear-gradient( #FF4B2B, #FF416C);
+  height: 70vh;
+  width: 195vh;
+  margin: 50px;
+  padding: 50px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* .why_us_content {
+
+} */
+
+.why_us_content h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  padding: 10px;
+}
+
+
+
+/* Footer */
+
+footer {
+  background-color: black ;
+  height: 25vh;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  display: grid;
+  flex-direction: column;
+}
+
+footer h1 {
+  color: #fff;
+  font-size: 20px;
+}
+
+
+

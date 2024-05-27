@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Preserve</title>
 
@@ -61,9 +60,7 @@
         <a href="https://www.google.com/"><i class="ri-dribbble-line"></i></a>
       </div>
 
-      <div class="scroll-down">
-        <a href="#"><i class="ri-arrow-down-s-fill"></i></a>
-      </div>
+      
 
          
 

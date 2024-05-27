@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "user_db";
+$dbname = "preserve";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -19,12 +19,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $edit_email = $_POST["edit_email"];
         $edit_user_status = $_POST["edit_user_status"];
 
-        $sql_update = "UPDATE users 
+        $sql_update = "UPDATE user 
                        SET username = '$edit_username', name = '$edit_name', email = '$edit_email', user_status = '$edit_user_status'
                        WHERE id = $id";
 
         if ($conn->query($sql_update) === TRUE) {
-            header("Location: admin_page.php");
+            header("Location: admin_panel.php");
             exit(); 
         } else {
             echo "Error updating user: " . $conn->error;
@@ -36,10 +36,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
 
-            $sql_delete = "DELETE FROM users WHERE id = $id";
+            $sql_delete = "DELETE FROM user WHERE id = $id";
 
             if ($conn->query($sql_delete) === TRUE) {
-                header("Location: admin_page.php");
+                header("Location: admin_panel.php");
                 exit();
             } else {
                 echo "Error deleting user: " . $conn->error;

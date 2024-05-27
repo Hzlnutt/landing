@@ -4,7 +4,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "user_db";
+$dbname = "preserve";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
 
-        $sql_fetch = "SELECT * FROM users WHERE id = $id";
+        $sql_fetch = "SELECT * FROM user WHERE id = $id";
         $result_fetch = $conn->query($sql_fetch);
 
         if ($result_fetch->num_rows > 0) {

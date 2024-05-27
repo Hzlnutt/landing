@@ -1,0 +1,76 @@
+body {
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
+
+}
+
+.boxing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    background-color: #fff;
+    height: 70vh;
+    width: 130vh;
+    margin: 50px;
+    padding: 50px;
+    border-radius: 100px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* align-content: space-between; */
+    flex-direction: column; 
+}
+
+.booking_data {
+    display: flex;
+    flex-direction: column;
+    /* margin-top: -25%; */
+    float: left;
+    margin-top: 25px;
+    margin-left: -100px;
+    padding-right: 210px;
+
+}
+
+.booking_data h1 {
+    font-size: 45px;
+    margin-left: 35px;
+}
+
+.booking_data input, select {
+    width: 160%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 100px;
+    height: 30px;
+}
+
+.box button {
+    height: 48px;
+    width: 130px;
+    margin-left: 45px;
+    margin-top: 20px;
+    border-radius: 100px;
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
+    color: #fff;
+    
+}
+
+.video_wisata {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    float: right;
+    margin-top: 100px;
+    margin-right: -80px;
+}
+
+.booking_data h4 {
+    height: 50px;
+    width: 10px;
+    margin-left: 25px;
+    margin-bottom: -30px;
+}
