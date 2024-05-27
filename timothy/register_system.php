@@ -59,9 +59,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($conn->query($sql) === TRUE) {
             if ($user_status === "admin") {
-                header("Location: admin_page.php");
+                echo '<script>
+                alert("Silahkah Login!");
+                </script>';    
+                header("Location: login.php");
             } elseif ($user_status === "user") {
-                header("Location: user_page.php");
+                echo '<script>
+                alert("Silahkah Login!");
+                </script>';    
+                header("Location: login.php");
             } else {
                 echo "Invalid user status";
             }

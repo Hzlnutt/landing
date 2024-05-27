@@ -35,7 +35,7 @@ $result = $conn->query($sql);
         <div class = "booking_data">
 			<h1>BOOKING</h1>
 			<input type="text" placeholder="Keberangkatan" name="keberangkatan" required/>
-            <input type="text" placeholder="Tujuan" name="tujuan" required/>
+            <select type="text" name="tujuan"><option value = "Menara Pisa">Menara Pisa</option></select>
 			<input type="email" placeholder="Email" name="email_booking" required/>
             <select class="pilih" name="kelas_transportasi" required>
             <option value="" disabled selected>Pilih Kelas Transportasi</option>

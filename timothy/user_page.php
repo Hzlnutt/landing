@@ -51,7 +51,7 @@ session_start();
           <li><a href="#Keunggulan">Keunggulan</a></li>
           <li><a href="tour_list.php">Tiket Saya</a></li>
           <li><a href="logout.php">Logout</a></li>
-          <li><h4> Halo, <?php echo $_SESSION['username'];?> </li>
+          <li><h4> Halo user, <?php echo $_SESSION['username'];?> </li>
         </ul>
       <div class="bx bx-menu" id="menu-icon"></div> 
       </header>

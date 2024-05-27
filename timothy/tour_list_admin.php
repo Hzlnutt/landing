@@ -33,9 +33,9 @@
           <li><a href="user_page.php#home">Home</a></li>
           <li><a href="user_page.php#poin">Wisata</a></li>
           <li><a href="user_page.php#Keunggulan">Keunggulan</a></li>
-          <li><a href="user_page.phptour_list.php">Tiket Saya</a></li>
+          <li><a href="user_page.phptour_list_admin.php">Tiket Saya</a></li>
           <li><a href="logout.php">Logout</a></li>
-          <li><h4> Halo, <?php echo $_SESSION['username'];?></li>
+          <li><h4> Halo admin, <?php echo $_SESSION['username'];?></li>
         </ul>
       </header>
     <main>
@@ -43,8 +43,7 @@
     <?php
         // Query untuk mengambil data tiket atas nama "asep" beserta harga dari tabel wisata
         $sql = "SELECT Id_Tiket, nama, keberangkatan, tujuan, email, quantity, (SELECT harga FROM wisata LIMIT 1) AS total 
-                FROM tiket 
-                WHERE nama = '$nama_user'";
+                FROM tiket ";
         $result = mysqli_query($conn, $sql);
 
 
@@ -62,7 +61,8 @@
                     <p>Email: <?php echo $row["email"]; ?></p>
                     <p>Quantity: <?php echo $row["quantity"]; ?></p>
                     <p>Total Harga:  Rp.<?php echo $total_harga; ?></p>
-                </div>               
+                    <button  value="edit" href= "tour_list_admin_edit.php"><b>edit</b></button>        
+                </div>    
                 </div>
         <?php
             }
