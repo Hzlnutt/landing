@@ -1,5 +1,3 @@
-<!-- admin_edit.php -->
-
 <?php
 include 'koneksi.php';
 
@@ -7,33 +5,39 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     if (isset($_GET['Id_Tiket'])) {
         $id = $_GET['Id_Tiket'];
 
-        $sql_fetch = "SELECT * FROM tiket WHERE id = $id";
-        $result_fetch = $conn->query($sql_fetch);
+        $sql_fetch = $conn->prepare("SELECT * FROM tiket WHERE Id_Tiket = ?");
+        $sql_fetch->bind_param('i', $id);
+        $sql_fetch->execute();
+        $result_fetch = $sql_fetch->get_result();
 
         if ($result_fetch->num_rows > 0) {
             $row = $result_fetch->fetch_assoc();
             ?>
-            <h2>Edit User</h2>
-            <form action="admin_crud.php?action=update&id=<?php echo $row['id']; ?>" method="post">
-                <label for="edit_username">Username:</label>
-                <input type="text" name="edit_username" value="<?php echo $row['username']; ?>" required><br>
-                <label for="edit_name">Name:</label>
-                <input type="text" name="edit_name" value="<?php echo $row['name']; ?>" required><br>
+            <h2>Edit Tiket</h2>
+            <form action="tour_list_admin_edit_sistem.php?action=update&Id_Tiket=<?php echo $row['Id_Tiket']; ?>" method="post">
+                <label for="Id_Wisata">Id Wisata:</label>
+                <input type="text" name="edit_Id_Wisata" value="<?php echo $row['Id_Wisata']; ?>" required><br>
+                <label for="edit_nama">Nama:</label>
+                <input type="text" name="edit_nama" value="<?php echo $row['nama']; ?>" required><br>
+                <label for="edit_keberangkatan">Keberangkatan:</label>
+                <input type="text" name="edit_keberangkatan" value="<?php echo $row['keberangkatan']; ?>" required><br>
+                <label for="edit_tujuan">Tujuan:</label>
+                <input type="text" name="edit_tujuan" value="<?php echo $row['tujuan']; ?>" required><br>
                 <label for="edit_email">Email:</label>
                 <input type="email" name="edit_email" value="<?php echo $row['email']; ?>" required><br>
-                <label for="edit_user_status">User Status:</label>
-                <select name="edit_user_status">
-                    <option value="user" <?php echo ($row['user_status'] == 'user') ? 'selected' : ''; ?>>User</option>
-                    <option value="admin" <?php echo ($row['user_status'] == 'admin') ? 'selected' : ''; ?>>Admin</option>
-                </select><br>
-                <input type="submit" value="Update User">
+                <label for="edit_quantity">Quantity:</label>
+                <input type="text" name="edit_quantity" value="<?php echo $row['quantity']; ?>" required><br>
+                <br>
+                <input type="submit" value="Update Tiket">
             </form>
             <?php
         } else {
-            echo "User not found";
+            echo "Tiket tidak ditemukan";
         }
     } else {
-        echo "Invalid request";
+        echo "Permintaan tidak valid";
     }
+} else {
+    echo "Metode permintaan tidak valid";
 }
 ?>
