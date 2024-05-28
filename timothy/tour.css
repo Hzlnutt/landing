@@ -74,3 +74,8 @@ body {
     margin-left: 25px;
     margin-bottom: -30px;
 }
+.id_tour {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+}

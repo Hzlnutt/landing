@@ -1,8 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "preserve";
+include 'koneksi.php';
 
 // $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -49,7 +46,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email_booking"];
     $kelas_transportasi = $_POST["kelas_transportasi"];
     $quantity = $_POST["quantity"];
-    
+    $Id_Wisata = $_POST["id_tour"];
+
     // $user_status = $_POST["user_status"];
 
     $checkQuery = "SELECT * FROM tiket WHERE nama = '$nama' OR email = '$email'";
@@ -57,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // if ($checkResult->num_rows > 0) {
     //     echo "Username or email already exists";
     // } else {
-        $sql = "INSERT INTO tiket (nama, keberangkatan, tujuan, email,kelas_transportasi,quantity) VALUES ('$nama', '$keberangkatan', '$tujuan','$email', '$kelas_transportasi','$quantity')";
+        $sql = "INSERT INTO tiket (Id_Wisata, nama, keberangkatan, tujuan, email,kelas_transportasi,quantity) VALUES ('$Id_Wisata', '$nama', '$keberangkatan', '$tujuan','$email', '$kelas_transportasi','$quantity')";
 
         if ($conn->query($sql) === TRUE) {
 

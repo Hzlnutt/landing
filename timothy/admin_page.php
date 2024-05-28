@@ -1,12 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "preserve";
-
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-session_start();
+include 'koneksi.php';
 
 
 
@@ -50,7 +43,7 @@ session_start();
           <li><a href="#home">Home</a></li>
           <li><a href="#poin">Wisata</a></li>
           <li><a href="#Keunggulan">Keunggulan</a></li>
-          <li><a href="tour_list_admin.php">Tiket Saya</a></li>
+          <li><a href="tour_list_admin.php">Tiket</a></li>
           <li><a href="admin_panel.php"><i>Admin Panel</i></a></li>
           <li><a href="logout.php">Logout</a></li>
           <li><h4> Halo Admin, <?php echo $_SESSION['username'];?> </li>

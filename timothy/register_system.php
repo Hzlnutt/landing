@@ -1,8 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "preserve";
+include 'koneksi.php';
 
 // $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -36,11 +33,7 @@ $dbname = "preserve";
 // $conn->close();
 
 
-$conn = new mysqli($servername, $username, $password, $dbname);
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];

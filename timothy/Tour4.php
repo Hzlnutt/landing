@@ -1,16 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "preserve";
-
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-session_start ();
-
-if ($conn->connect_error) {
-    die("Koneksi gagal: " . $conn->connect_error);
-}
+include 'koneksi.php';
 
 // Query untuk mengambil data harga dari tabel wisata
 $sql = "SELECT harga FROM wisata Where Id_Wisata = 4";
@@ -35,7 +24,7 @@ $result = $conn->query($sql);
         <div class = "booking_data">
 			<h1>BOOKING</h1>
 			<input type="text" placeholder="Keberangkatan" name="keberangkatan" required/>
-            <select type="text" name="tujuan"><option value = "Candi Prambanan & Borobudur">Candi Prambanan & Borobudur</option></select>
+            <input type="text" placeholder="Tujuan" name="tujuan" required/>
 			<input type="email" placeholder="Email" name="email_booking" required/>
             <select class="pilih" name="kelas_transportasi" required>
             <option value="" disabled selected>Pilih Kelas Transportasi</option>
@@ -60,6 +49,7 @@ $result = $conn->query($sql);
 } else {
     echo "Tidak ada data harga wisata.";
 }?></h4>
+<select class="id_tour" name="id_tour" required ><option value= "4" >4</option></select>
         </div>
 
             <div class = "video_wisata">

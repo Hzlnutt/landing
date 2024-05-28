@@ -14,16 +14,18 @@
     <a href="login.php"><button>ADD USER</button></a>
 
     <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "preserve";
 
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    include 'koneksi.php';
+    // $servername = "localhost";
+    // $username = "root";
+    // $password = "";
+    // $dbname = "preserve";
 
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    // $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // if ($conn->connect_error) {
+    //     die("Connection failed: " . $conn->connect_error);
+    // }
 
     $sql = "SELECT * FROM user";
     $result = $conn->query($sql);
@@ -51,6 +53,9 @@
 
     $conn->close();
     ?>
+    <br>
+
+        <a href="admin_page.php"><button>RETURN</button></a>
 </body>
 <script>
 function confirmDelete() {

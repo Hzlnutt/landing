@@ -1,16 +1,9 @@
 <!-- admin_edit.php -->
 
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "preserve";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+include 'koneksi.php';
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     if (isset($_GET['id'])) {

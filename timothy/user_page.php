@@ -1,12 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "preserve";
-
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-session_start();
+include 'koneksi.php';
 
 
 

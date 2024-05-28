@@ -1,16 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "preserve";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Koneksi gagal: " . $conn->connect_error);
-}
-
-session_start();
+include 'koneksi.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
@@ -52,6 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo '<script>
             alert("Pengguna tidak ada!");
         </script>';
+        header("Location: ../landing/Preserve_Web.php?pengguna tidak ada");
     }
 }
 

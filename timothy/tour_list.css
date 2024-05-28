@@ -170,11 +170,12 @@
     transform: translateY(-5px);
   }
 
-  .cardhome {
+.cardhome {
     display: flex;
-    flex-direction: row-reverse; /* Mengubah arah konten menjadi dari kanan ke kiri */
-    justify-content: flex-end; /* Mengatur konten agar menyamping ke kanan */
-    width: 100%; /* Sesuaikan lebar sesuai kebutuhan Anda */
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    flex-direction: column;
 }
 
 .card {
@@ -182,12 +183,10 @@
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 20px;
+    margin: 15px ;
     width: 250px;
-    margin: 20px;
+    height: 300px;
 }
-
-/* Tambahkan margin untuk memisahkan card jika diinginkan */
-
 
 .card h2 {
     color: #333;

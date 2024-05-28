@@ -1,22 +1,13 @@
 <!-- admin_edit.php -->
 
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "preserve";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include 'koneksi.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    if (isset($_GET['id'])) {
-        $id = $_GET['id'];
+    if (isset($_GET['Id_Tiket'])) {
+        $id = $_GET['Id_Tiket'];
 
-        $sql_fetch = "SELECT * FROM user WHERE id = $id";
+        $sql_fetch = "SELECT * FROM tiket WHERE id = $id";
         $result_fetch = $conn->query($sql_fetch);
 
         if ($result_fetch->num_rows > 0) {

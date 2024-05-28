@@ -1,19 +1,6 @@
 <?php
-        // Koneksi ke database
-        $servername = "localhost";
-        $username = "root"; // Ganti dengan username database Anda
-        $password = ""; // Ganti dengan password database Anda
-        $dbname = "preserve"; // Ganti dengan nama database Anda
-
-        // Membuat koneksi
-        $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-        // Memeriksa koneksi
-        if (!$conn) {
-            die("Koneksi gagal: " . mysqli_connect_error());
-        }
-
-        session_start();
+        include 'koneksi.php';
+        
         $nama_user = $_SESSION['username'];
 
         ?>
@@ -33,7 +20,7 @@
           <li><a href="user_page.php#home">Home</a></li>
           <li><a href="user_page.php#poin">Wisata</a></li>
           <li><a href="user_page.php#Keunggulan">Keunggulan</a></li>
-          <li><a href="user_page.phptour_list_admin.php">Tiket Saya</a></li>
+          <li><a href="user_page.phptour_list_admin.php">Tiket</a></li>
           <li><a href="logout.php">Logout</a></li>
           <li><h4> Halo admin, <?php echo $_SESSION['username'];?></li>
         </ul>
@@ -61,7 +48,8 @@
                     <p>Email: <?php echo $row["email"]; ?></p>
                     <p>Quantity: <?php echo $row["quantity"]; ?></p>
                     <p>Total Harga:  Rp.<?php echo $total_harga; ?></p>
-                    <button  value="edit" href= "tour_list_admin_edit.php"><b>edit</b></button>        
+                    <a href="tour_list_admin_edit.php?Id_Tiket=<?php echo $row['Id_Tiket']; ?>"><button value="edit"><b>Edit</b></button></a>
+        
                 </div>    
                 </div>
         <?php
